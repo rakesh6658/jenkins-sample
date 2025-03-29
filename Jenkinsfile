@@ -6,10 +6,9 @@ pipeline {
     }
     stages {
         stage('Example') {
-            input {
-                message "should we continue?"
-            }
+            
             steps {
+                input('Do you want to proceed?')
                 echo 'Hello World'
                 
             }
