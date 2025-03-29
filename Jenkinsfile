@@ -1,8 +1,14 @@
 // Declarative //
 pipeline {
-    agent any
+    agent { label 'agent' }
+    options {
+         ansiColor('xterm')
+    }
     stages {
         stage('Example') {
+            input {
+                message "should we continue?"
+            }
             steps {
                 echo 'Hello World'
                 
