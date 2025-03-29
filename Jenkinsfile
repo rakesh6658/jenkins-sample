@@ -17,7 +17,7 @@ pipeline {
             echo"script is success"
         }
         failure{
-            echo "script is failures"
+            echo "script is failure"
         }
     }
 }
