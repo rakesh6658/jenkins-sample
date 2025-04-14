@@ -1,6 +1,6 @@
 // Declarative //
 pipeline {
-    agent { label 'agent' }
+    agent any
     options {
          ansiColor('xterm')
     }
