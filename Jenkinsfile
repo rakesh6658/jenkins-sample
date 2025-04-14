@@ -4,13 +4,16 @@ pipeline {
     options {
         timeout(time: 1, unit: 'HOURS') 
     }
+    environment { 
+        CC = 'clang'
+    }
     stages {
         stage('Example') {
             
             steps {
                 input('Do you want to proceed?')
                 echo 'Hello World'
-                
+                sh 'printenv'
             }
         }
     }
