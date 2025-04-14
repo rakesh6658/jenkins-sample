@@ -5,7 +5,7 @@ pipeline {
         timeout(time: 1, unit: 'HOURS') 
     }
     environment { 
-        CC = 'clang'
+        user = 'rakesh'
     }
     stages {
         stage('Example') {
