@@ -22,7 +22,7 @@ pipeline {
         stage('Example') {
             
             steps {
-                input('Do you want to proceed?')
+            
                 echo 'Hello World'
                 sh 'printenv'
                 echo "Hello ${params.PERSON}"
