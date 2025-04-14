@@ -42,6 +42,9 @@ pipeline {
                 branch 'origin/master'
                 environment name: 'user', value: 'rakesh'
             }
+            steps {
+                echo 'Deploying'
+            }
         }
     }
     post { 
