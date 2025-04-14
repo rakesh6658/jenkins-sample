@@ -21,6 +21,7 @@ pipeline {
     stages {
         stage('Example') {
             
+            
             steps {
             
                 echo 'Hello World'
@@ -34,6 +35,12 @@ pipeline {
                 echo "Choice: ${params.CHOICE}"
 
                 echo "Password: ${params.PASSWORD}"
+            }
+        }
+        stage('Example Deploy'){
+            when {
+                branch 'origin/master'
+                environment name: 'user', value: 'rakesh'
             }
         }
     }
