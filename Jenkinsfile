@@ -2,7 +2,7 @@
 pipeline {
     agent any
     options {
-         ansiColor('xterm')
+        timeout(time: 1, unit: 'HOURS') 
     }
     stages {
         stage('Example') {
