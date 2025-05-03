@@ -16,7 +16,7 @@ pipeline {
         stage('Example Deploy') {
            
             steps {
-                echo 'Deploying'
+                echo 'Deploying' rakesh
             }
         }
     }
@@ -27,6 +27,9 @@ pipeline {
         }
         success{
            echo 'pipeline is success rakesh'
+        }
+        failure{
+            echo 'pipeline is failure rakesh'
         }
     
     }
