@@ -1,39 +1,20 @@
 // Declarative //
 pipeline {
     agent any
-    options {
-        timeout(time: 1, unit: 'HOURS') 
-    }
-    environment { 
-        user = 'rakesh'
-    }
+    
 
-    parameters {
-        string(name: 'PERSON', defaultValue: 'World', description: 'Who to greet')
-        text(name: 'BIOGRAPHY', defaultValue: 'Write something...', description: 'Bio info')
-        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'A toggle')
-        choice(name: 'CHOICE', choices: ['Option 1', 'Option 2', 'Option 3'], description: 'Pick one')
-        password(name: 'PASSWORD', defaultValue: '', description: 'A secret password')
-    }
+    
 
     stages {
         stage('Example') {
             steps {
                 echo 'Hello World'
-                sh 'printenv'
-                echo "Hello ${params.PERSON}"
-                echo "Biography: ${params.BIOGRAPHY}"
-                echo "Toggle: ${params.TOGGLE}"
-                echo "Choice: ${params.CHOICE}"
-                echo "Password: ${params.PASSWORD}"
+                
             }
         }
 
         stage('Example Deploy') {
-            when {
-                branch 'origin/master'
-                environment name: 'user', value: 'rakesh'
-            }
+           
             steps {
                 echo 'Deploying'
             }
@@ -41,14 +22,9 @@ pipeline {
     }
 
     post {
-        always {
-            echo 'I will always say Hello again!'
+        always{
+            echo 'pipeline is success'
         }
-        success {
-            echo 'script is success'
-        }
-        failure {
-            echo 'script is failure'
-        }
+    
     }
 }
