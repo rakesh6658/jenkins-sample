@@ -23,10 +23,10 @@ pipeline {
 
     post {
         always{
-            echo 'pipeline is  always success'
+            echo 'pipeline is   success dubbu'
         }
         success{
-           echo 'pipeline is success success'
+           echo 'pipeline is success rakesh'
         }
     
     }
