@@ -9,8 +9,11 @@ environment {
 
     stages {
         stage('Example') {
+            environment {
+                AN_ACCESS_KEY = credentials('ssh-auth') 
+            }
             steps {
-                echo 'Hello World'
+                sh 'printenv'
                 
                 
             }
