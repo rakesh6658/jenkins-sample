@@ -16,10 +16,11 @@ pipeline {
         stage('Example Deploy') {
            
             steps {
-                echo 'Deploying' rakesh
+                echo 'Deploying'
             }
         }
     }
+    rakesh
 
     post {
         always{
