@@ -2,13 +2,16 @@
 pipeline {
     agent any
     
-
+environment { 
+        user ='rakesh'
+    }
     
 
     stages {
         stage('Example') {
             steps {
                 echo 'Hello World'
+                sh 'printenv'
                 
             }
         }
@@ -20,7 +23,7 @@ pipeline {
             }
         }
     }
-    rakesh
+    
 
     post {
         always{
@@ -29,9 +32,7 @@ pipeline {
         success{
            echo 'pipeline is success rakesh'
         }
-        failure{
-            echo 'pipeline is failure rakesh'
-        }
+        
     
     }
 }
