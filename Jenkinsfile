@@ -4,9 +4,7 @@ pipeline {
     options{
         timeout(time: 2, unit: 'HOURS')
     }
-    triggers{
-        cron('* * * * *')
-    }
+    
     
 environment { 
         user ='rakesh'
