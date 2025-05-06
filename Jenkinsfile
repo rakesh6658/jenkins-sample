@@ -27,7 +27,7 @@ environment {
         stage('condition'){
             
                 when {
-                 environment name: 'user', value: 'rakesh'
+                 environment name: 'user', value: 'dubbu'
             }
             steps {
                 echo 'This runs only on main branch'
