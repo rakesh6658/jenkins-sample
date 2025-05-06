@@ -9,9 +9,6 @@ pipeline {
 environment { 
         user ='rakesh'
     }
-    when {
-                branch 'origin/master'
-            }
     
 
     stages {
