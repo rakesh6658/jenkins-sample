@@ -19,14 +19,20 @@ environment {
             environment {
                 AN_ACCESS_KEY = credentials('ssh-auth') 
             }
-            when {
-                branch 'origin/master'
-            }
+            
             steps {
                 sh 'printenv'
                 
                 
                 
+            }
+        }
+        stage('condition'){
+            steps{
+                when {
+                branch 'origin/master'
+            }
+
             }
         }
 
