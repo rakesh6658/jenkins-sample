@@ -25,19 +25,23 @@ environment {
             }
         }
         stage('condition'){
-            steps{
+            
                 when {
                 branch 'origin/master'
             }
+            steps {
+                echo 'This runs only on main branch'
+            }
 
             }
-        }
+        
 
         stage('Example Deploy') {
            
             steps {
                 echo 'Deploying'
             }
+            
              input {
                 message "Should we continue?"
                 ok "Yes, we should."
