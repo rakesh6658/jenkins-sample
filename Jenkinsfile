@@ -26,7 +26,7 @@ pipeline {
             echo 'This will always run (success or failure)'
         }
         success {
-            echo 'This will run only if the pipeline succeeded'
+            echo 'This will run only if the pipeline succeeded from webhook'
         }
         failure {
             echo 'This will run only if the pipeline failed'
