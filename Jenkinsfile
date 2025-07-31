@@ -37,8 +37,15 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
-                sh'printenv'
+                echo "Hello ${params.PERSON}"
+
+                echo "Biography: ${params.BIOGRAPHY}"
+
+                echo "Toggle: ${params.TOGGLE}"
+
+                echo "Choice: ${params.CHOICE}"
+
+                echo "Password: ${params.PASSWORD}"
             }
         }
     }
