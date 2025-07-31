@@ -16,6 +16,9 @@ pipeline {
                 echo 'Running tests...'
                 
             }
+             environment { 
+                auth = credentials('ssh-auth') 
+            }
         }
 
         stage('Deploy') {
