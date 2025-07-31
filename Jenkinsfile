@@ -30,6 +30,9 @@ pipeline {
                 branch 'master'
                 environment name: 'name', value: 'rakesh'
             }
+            steps {
+                echo 'Deploying to production...'
+            }
                     }
     }
      post {
