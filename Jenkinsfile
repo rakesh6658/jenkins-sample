@@ -1,5 +1,8 @@
 pipeline {
-    agent { label 'agent-1' }
+    agent any
+    environment { 
+        name = 'rakesh'
+    }
 
     stages {
         stage('Build') {
