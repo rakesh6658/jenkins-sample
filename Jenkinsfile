@@ -3,6 +3,9 @@ pipeline {
     environment { 
         name = 'rakesh'
     }
+    options{
+        timeout(time: 1, unit: 'HOURS')
+    }
 
     stages {
         stage('Build') {
