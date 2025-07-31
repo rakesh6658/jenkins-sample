@@ -27,7 +27,7 @@ pipeline {
 
         stage('Deploy') {
             when {
-                branch 'master'
+                branch 'origin/master'
                 environment name: 'name', value: 'rakesh'
             }
             steps {
